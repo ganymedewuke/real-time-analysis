@@ -10,6 +10,9 @@ import org.apache.flink.api.common.typeinfo.TypeInformation;
 
 import java.io.IOException;
 
+/**
+ * kafka数据的序列化与反序列化
+ */
 public class KafkaMessageSchema implements DeserializationSchema<KafkaMessage>, SerializationSchema<KafkaMessage> {
     @Override
     public KafkaMessage deserialize(byte[] message) throws IOException {

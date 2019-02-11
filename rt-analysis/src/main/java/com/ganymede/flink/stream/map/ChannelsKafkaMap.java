@@ -22,14 +22,18 @@ public class ChannelsKafkaMap extends RichMapFunction<KafkaMessage, HotChannel> 
     public HotChannel map(KafkaMessage value) throws Exception {
         logger.info("map进来的数据 value === : " + value);
         String jsonString = value.getJsonMessage();
+        //json转换成用户浏览日志对象
         UserScanLog userScanLog = JSON.parseObject(jsonString, UserScanLog.class);
 
         long channelId = userScanLog.getChannelId();
 
+        //组装好频道热点数据对象
         HotChannel hotChannel = new HotChannel();
         hotChannel.setChannelId(channelId);
         hotChannel.setCount(Long.parseLong(value.getCount() + ""));
 
+
+        //返回频道热点数据对象
         return hotChannel;
     }
 }

@@ -49,6 +49,7 @@ public class ProcessData {
 
 		FlinkKafkaConsumer010 flinkKafkaConsumer010 = new FlinkKafkaConsumer010<>(parameterTool.getRequired("input-topic"), new KafkaMessageSchema(), parameterTool.getProperties());
 
+		// 获取数据流，注意：实时为 DataStream, 批处理为 DataSet
 		DataStream<KafkaMessage> input = env.addSource(flinkKafkaConsumer010.assignTimestampsAndWatermarks(new KafkaMessageWatermarks()));
 
 		DataStream<HotChannel> map = input.map(new ChannelsKafkaMap());
