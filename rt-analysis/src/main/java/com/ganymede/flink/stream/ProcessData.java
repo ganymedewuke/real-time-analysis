@@ -26,7 +26,7 @@ public class ProcessData {
 	public static void main(String[] args) throws Exception {
 		args = new String[]{"--input-topic", "test", "--bootstrap.servers", "spark1:9092,spark2:9092,spark3:9092",
 				"--zookeeper.connect", "spark1:2181,spark2:2181,spark3:2181",
-				"--group.id", "ProcessData_20190209_2",
+				"--group.id", "ProcessData_20190211",
 				"--windows.size", "500", "--windows.slide", "1"};
 
 		final ParameterTool parameterTool = ParameterTool.fromArgs(args);

@@ -8,8 +8,13 @@
 Hello World!
 展示页面！
 <hr/>
-<span th:text="${a}"></span>
-<br/>
-<span th:text="${channelId8}"></span>
+
+<table>
+    <tr th:each="channedlId:${result}">
+        <td th:text="${channedlId}"></td>
+    </tr>
+
+</table>
+
 </body>
 </html>

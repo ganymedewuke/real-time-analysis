@@ -90,15 +90,17 @@ public class RedisService {
 
 	/**
 	 * 获取缓存集合
+	 *
 	 * @param parentKey
 	 * @return
 	 */
 	public Map<String, List<String>> getAllData(String parentKey) {
 		Map<String, List<String>> resultMap = new HashMap<>();
-		Set<String> setData = stringRedisTemplate.keys(parentKey + "");
+		Set<String> setData = stringRedisTemplate.keys(parentKey + "*");
 
 		for (String key : setData) {
 			List<String> list = stringRedisTemplate.opsForList().range(key, 0l, 200l);
+			resultMap.put(key, list);
 		}
 		return resultMap;
 	}
