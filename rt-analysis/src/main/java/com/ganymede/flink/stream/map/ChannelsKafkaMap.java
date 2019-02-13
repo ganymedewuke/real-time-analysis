@@ -2,15 +2,11 @@ package com.ganymede.flink.stream.map;
 
 import com.alibaba.fastjson.JSON;
 import com.ganymede.analy.HotChannel;
-import com.ganymede.flink.stream.ProcessData;
 import com.ganymede.input.KafkaMessage;
 import com.ganymede.log.UserScanLog;
 import org.apache.flink.api.common.functions.RichMapFunction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * 计算频道排序

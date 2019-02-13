@@ -1,4 +1,4 @@
-package com.ganymede.flink.stream;
+package com.ganymede.flink.stream.task;
 
 import com.ganymede.analy.HotChannel;
 import com.ganymede.flink.stream.map.ChannelsKafkaMap;
@@ -6,22 +6,19 @@ import com.ganymede.flink.stream.reduce.ChannelReduce;
 import com.ganymede.flink.transfer.KafkaMessageSchema;
 import com.ganymede.flink.transfer.KafkaMessageWatermarks;
 import com.ganymede.flink.utils.JedisPoolCacheUtils;
-import com.ganymede.flink.utils.RedisUtil;
 import com.ganymede.input.KafkaMessage;
 import org.apache.flink.api.common.restartstrategy.RestartStrategies;
-import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.api.java.utils.ParameterTool;
 import org.apache.flink.streaming.api.TimeCharacteristic;
 import org.apache.flink.streaming.api.datastream.DataStream;
-import org.apache.flink.streaming.api.datastream.IterativeStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.functions.sink.SinkFunction;
 import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer010;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ProcessData {
-	private final static Logger logger = LoggerFactory.getLogger(ProcessData.class);
+public class HotChannelProcessData {
+	private final static Logger logger = LoggerFactory.getLogger(HotChannelProcessData.class);
 
 	public static void main(String[] args) throws Exception {
 		args = new String[]{"--input-topic", "test", "--bootstrap.servers", "spark1:9092,spark2:9092,spark3:9092",
