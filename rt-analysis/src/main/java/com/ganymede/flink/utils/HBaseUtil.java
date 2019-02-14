@@ -85,7 +85,7 @@ public class HBaseUtil {
 
 	/**
 	 * 获取数据
-	 *
+	 * "baseuserscaninfo"->"time"
 	 * @param tableName
 	 * @param rowKey
 	 * @param familyName
