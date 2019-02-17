@@ -55,12 +55,13 @@ public class HotChannelProcessData {
 				reduce(new ChannelReduce());
 
 
+		reduce.print();
 		reduce.addSink(new SinkFunction<HotChannel>() {
 			@Override
 			public void invoke(HotChannel value) {
 				long count = value.getCount();
 				long channelId = value.getChannelId();
-				System.out.println("输出===  ： " + channelId + "," + count + "");
+//				System.out.println("输出===  ： " + channelId + "," + count + "");
 				JedisPoolCacheUtils.lpush("channelId->" + channelId, count + "");
 			}
 		}).name("HotChannelReduce");

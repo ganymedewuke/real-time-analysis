@@ -20,24 +20,24 @@ public class ChannelVisterDao {
 	 * @return
 	 * @throws ParseException
 	 */
-	public UserState getUserStateByVisiTime(String userId, long timeStamp) throws ParseException {
+	public static UserState getUserStateByVisiTime(String userId, long timeStamp) throws ParseException {
 		UserState userState = new UserState();
 		try {
-			String result = HBaseUtil.getData("baseuserscaninfo", "userId", "time", "firstVistTime");
+			String result = HBaseUtil.getData("baseuserscaninfo", userId, "time", "firstVistTime");
 
 			if (result == null) { //第一次访问
 				Map<String, String> dataMap = new HashMap<>();
 				dataMap.put("firstVistTime", timeStamp + "");
 				dataMap.put("lastVistTime", timeStamp + "");
 
-				HBaseUtil.put("baseuserscaninfo", "userId", "time", dataMap);
+				HBaseUtil.put("baseuserscaninfo", userId, "time", dataMap);
 				userState.setNew(true);
 				userState.setFirstDay(true);
 				userState.setFirstHour(true);
 				userState.setFirstMonth(true);
 			} else {
 
-				String lastVistTimeStr = HBaseUtil.getData("baseuserscaninfo", "userId", "time", "lastVistTime");
+				String lastVistTimeStr = HBaseUtil.getData("baseuserscaninfo", userId, "time", "lastVistTime");
 
 				if (StringUtils.isNotBlank(lastVistTimeStr)) {
 					//正点小时时间戳
@@ -62,7 +62,7 @@ public class ChannelVisterDao {
 				}
 
 				//更新最后一次访问时间
-				HBaseUtil.putData("baseuserscaninfo", "userId", "time", "lastVistTime", timeStamp + "");
+				HBaseUtil.putData("baseuserscaninfo", userId, "time", "lastVistTime", timeStamp + "");
 			}
 
 

@@ -43,6 +43,12 @@ public class HBaseUtil {
 
 	/**
 	 * 创建表
+	 * create 'baseuserscaninfo','time'
+	 * create 'channelinfo','info'
+	 * <p>
+	 * 删除hbase表
+	 * disable 'channelinfo'
+	 * create 'channelinfo','info'
 	 *
 	 * @param tabName
 	 * @param familyName
@@ -86,6 +92,7 @@ public class HBaseUtil {
 	/**
 	 * 获取数据
 	 * "baseuserscaninfo"->"time"
+	 *
 	 * @param tableName
 	 * @param rowKey
 	 * @param familyName
@@ -125,10 +132,10 @@ public class HBaseUtil {
 	}
 
 	public static void main(String[] args) throws IOException {
-		Map<String,String> map = new HashMap();
-		map.put("m1","xx");
-		map.put("m2","xx2");
-		map.put("m3","你好，谢谢");
+		Map<String, String> map = new HashMap();
+		map.put("m1", "xx");
+		map.put("m2", "xx2");
+		map.put("m3", "你好，谢谢");
 
 		put("baseuserscaninfo", "a4", "time", map);
 

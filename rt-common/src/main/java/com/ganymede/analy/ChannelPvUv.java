@@ -6,6 +6,8 @@ public class ChannelPvUv {
 	private long pvCount;
 	private long uvCount;
 	private long timeStamp;
+	private String timeString;
+	private String groupByField;
 
 	public long getChannelId() {
 		return channelId;
@@ -45,5 +47,34 @@ public class ChannelPvUv {
 
 	public void setTimeStamp(long timeStamp) {
 		this.timeStamp = timeStamp;
+	}
+
+	public String getTimeString() {
+		return timeString;
+	}
+
+	public void setTimeString(String timeString) {
+		this.timeString = timeString;
+	}
+
+	public String getGroupByField() {
+		return groupByField;
+	}
+
+	public void setGroupByField(String groupByField) {
+		this.groupByField = groupByField;
+	}
+
+	@Override
+	public String toString() {
+		return "ChannelPvUv{" +
+				"channelId=" + channelId +
+				", userId=" + userId +
+				", pvCount=" + pvCount +
+				", uvCount=" + uvCount +
+				", timeStamp=" + timeStamp +
+				", timeString='" + timeString + '\'' +
+				", groupByField='" + groupByField + '\'' +
+				'}';
 	}
 }

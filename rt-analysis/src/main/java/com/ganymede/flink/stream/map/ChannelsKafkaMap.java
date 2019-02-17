@@ -16,7 +16,7 @@ public class ChannelsKafkaMap extends RichMapFunction<KafkaMessage, HotChannel> 
 
     @Override
     public HotChannel map(KafkaMessage value) throws Exception {
-        logger.info("map进来的数据 value === : " + value);
+        logger.debug("map进来的数据 value === : " + value);
         String jsonString = value.getJsonMessage();
         //json转换成用户浏览日志对象
         UserScanLog userScanLog = JSON.parseObject(jsonString, UserScanLog.class);

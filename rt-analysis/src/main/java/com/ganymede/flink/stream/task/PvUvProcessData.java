@@ -3,16 +3,15 @@ package com.ganymede.flink.stream.task;
 import com.ganymede.analy.ChannelPvUv;
 import com.ganymede.flink.stream.map.ChannelsPvUvMap;
 import com.ganymede.flink.stream.reduce.ChannelPvUvReduce;
+import com.ganymede.flink.stream.reduce.ChannelsPvUvSinkReduce;
 import com.ganymede.flink.transfer.KafkaMessageSchema;
 import com.ganymede.flink.transfer.KafkaMessageWatermarks;
-import com.ganymede.flink.utils.JedisPoolCacheUtils;
 import com.ganymede.input.KafkaMessage;
 import org.apache.flink.api.common.restartstrategy.RestartStrategies;
 import org.apache.flink.api.java.utils.ParameterTool;
 import org.apache.flink.streaming.api.TimeCharacteristic;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
-import org.apache.flink.streaming.api.functions.sink.SinkFunction;
 import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer010;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,8 +22,8 @@ public class PvUvProcessData {
 	public static void main(String[] args) throws Exception {
 		args = new String[]{"--input-topic", "test", "--bootstrap.servers", "spark1:9092,spark2:9092,spark3:9092",
 				"--zookeeper.connect", "spark1:2181,spark2:2181,spark3:2181",
-				"--group.id", "ProcessData_20190211",
-				"--windows.size", "500", "--windows.slide", "1"};
+				"--group.id", "ProcessData_20190217",
+				"--windows.size", "5", "--windows.slide", "1"};
 
 		final ParameterTool parameterTool = ParameterTool.fromArgs(args);
 
@@ -49,23 +48,16 @@ public class PvUvProcessData {
 		// 获取数据流，注意：实时为 DataStream, 批处理为 DataSet
 		DataStream<KafkaMessage> input = env.addSource(flinkKafkaConsumer010.assignTimestampsAndWatermarks(new KafkaMessageWatermarks()));
 
-		DataStream<ChannelPvUv> map = input.map(new ChannelsPvUvMap());
+		DataStream<ChannelPvUv> map = input.flatMap(new ChannelsPvUvMap());
 
-		DataStream<ChannelPvUv> reduce = map.keyBy("userId").
-				countWindow(Long.valueOf(parameterTool.getRequired("windows.size"))).
+
+		DataStream<ChannelPvUv> reduce = map.keyBy("groupByField").
+//				countWindow(Long.valueOf(parameterTool.getRequired("windows.size"))).
 				reduce(new ChannelPvUvReduce());
 
+		reduce.print();
+		reduce.addSink(new ChannelsPvUvSinkReduce()).name("HotChannelReduce");
 
-		reduce.addSink(new SinkFunction<ChannelPvUv>() {
-			@Override
-			public void invoke(ChannelPvUv value) {
-				long count = value.getPvCount();
-				long channelId = value.getChannelId();
-				System.out.println("输出===  ： " + channelId + "," + count + "");
-				JedisPoolCacheUtils.lpush("channelId->" + channelId, count + "");
-			}
-		}).name("HotChannelReduce");
-
-		env.execute("Hot Channels");
+		env.execute("ChannelsPvUv");
 	}
 }
