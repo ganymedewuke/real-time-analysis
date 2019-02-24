@@ -10,14 +10,14 @@ import java.util.Map;
 
 public class ChannelsPvUvSinkReduce implements SinkFunction<ChannelPvUv> {
 	@Override
-	public void invoke(ChannelPvUv value) throws Exception {
+	public void invoke(ChannelPvUv value, Context context) throws Exception {
 		long channelId = value.getChannelId();
 		long pvCount = value.getPvCount();
 		long uvCount = value.getUvCount();
 		String timeString = value.getTimeString();
 
-		String pv = HBaseUtil.getData("channelinfo", channelId + timeString + "", "info", "pv");
-		String uv = HBaseUtil.getData("channelinfo", channelId + timeString + "", "info", "uv");
+		String pv = HBaseUtil.getData("channelinfo", channelId + "->" + timeString + "", "info", "pv");
+		String uv = HBaseUtil.getData("channelinfo", channelId + "->" + timeString + "", "info", "uv");
 
 		if (StringUtils.isNotBlank(pv)) {
 			pvCount += pvCount + Long.valueOf(pv);
@@ -32,6 +32,7 @@ public class ChannelsPvUvSinkReduce implements SinkFunction<ChannelPvUv> {
 		dataMap.put("pv", pvCount + "");
 		dataMap.put("uv", uvCount + "");
 
+		System.out.println("ChannelsPvUvSinkReduce -> " + channelId + "->" + timeString + "" + dataMap);
 		HBaseUtil.put("channelinfo", channelId + "->" + timeString + "", "info", dataMap);
 	}
 }

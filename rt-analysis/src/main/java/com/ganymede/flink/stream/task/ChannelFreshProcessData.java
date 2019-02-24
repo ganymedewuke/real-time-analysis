@@ -1,9 +1,9 @@
 package com.ganymede.flink.stream.task;
 
-import com.ganymede.analy.ChannelPvUv;
-import com.ganymede.flink.stream.map.ChannelsPvUvMap;
-import com.ganymede.flink.stream.reduce.ChannelPvUvReduce;
-import com.ganymede.flink.stream.reduce.ChannelsPvUvSinkReduce;
+import com.ganymede.analy.ChannelFresh;
+import com.ganymede.flink.stream.map.ChannelFreshMap;
+import com.ganymede.flink.stream.reduce.ChannelFreshReduce;
+import com.ganymede.flink.stream.reduce.ChannelsFreshSinkReduce;
 import com.ganymede.flink.transfer.KafkaMessageSchema;
 import com.ganymede.flink.transfer.KafkaMessageWatermarks;
 import com.ganymede.input.KafkaMessage;
@@ -16,13 +16,13 @@ import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer010;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class PvUvProcessData {
-	private final static Logger logger = LoggerFactory.getLogger(PvUvProcessData.class);
+public class ChannelFreshProcessData {
+	private final static Logger logger = LoggerFactory.getLogger(ChannelFreshProcessData.class);
 
 	public static void main(String[] args) throws Exception {
 		args = new String[]{"--input-topic", "test", "--bootstrap.servers", "spark1:9092,spark2:9092,spark3:9092",
 				"--zookeeper.connect", "spark1:2181,spark2:2181,spark3:2181",
-				"--group.id", "ProcessData_20190225",
+				"--group.id", "ProcessData_20190217",
 				"--windows.size", "1", "--windows.slide", "1"};
 
 		final ParameterTool parameterTool = ParameterTool.fromArgs(args);
@@ -48,17 +48,17 @@ public class PvUvProcessData {
 		// 获取数据流，注意：实时为 DataStream, 批处理为 DataSet
 		DataStream<KafkaMessage> input = env.addSource(flinkKafkaConsumer010.assignTimestampsAndWatermarks(new KafkaMessageWatermarks()));
 
-		DataStream<ChannelPvUv> map = input.flatMap(new ChannelsPvUvMap());
+		DataStream<ChannelFresh> map = input.flatMap(new ChannelFreshMap());
 
 
-		DataStream<ChannelPvUv> reduce = map.keyBy("groupByField").
+		DataStream<ChannelFresh> reduce = map.keyBy("groupByField").
 				countWindow(Long.valueOf(parameterTool.getRequired("windows.size"))).
-				reduce(new ChannelPvUvReduce());
+				reduce(new ChannelFreshReduce());
 
 		//打印reduce的内容
 //		reduce.print();
-		reduce.addSink(new ChannelsPvUvSinkReduce()).name("HotChannelReduce");
+		reduce.addSink(new ChannelsFreshSinkReduce()).name("HotChannelReduce");
 
-		env.execute("ChannelsPvUv");
+		env.execute("ChannelFresh");
 	}
 }

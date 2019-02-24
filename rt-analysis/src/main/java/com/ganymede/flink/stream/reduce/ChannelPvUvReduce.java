@@ -19,8 +19,8 @@ public class ChannelPvUvReduce implements ReduceFunction<ChannelPvUv> {
 		channelPvUv.setChannelId(channelId);
 		channelPvUv.setTimeStamp(timeStamp1);
 		channelPvUv.setTimeString(timeString);
-		channelPvUv.setPvCount(pvCount1+pvCount2);
-		channelPvUv.setUvCount(uvCount1+uvCount2);
+		channelPvUv.setPvCount(pvCount1 + pvCount2);
+		channelPvUv.setUvCount(uvCount1 + uvCount2);
 		channelPvUv.setGroupByField(value1.getGroupByField());
 //		System.out.println(channelPvUv);
 
