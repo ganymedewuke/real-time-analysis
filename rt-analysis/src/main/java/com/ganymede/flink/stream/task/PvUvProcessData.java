@@ -55,6 +55,7 @@ public class PvUvProcessData {
 				countWindow(Long.valueOf(parameterTool.getRequired("windows.size"))).
 				reduce(new ChannelPvUvReduce());
 
+		//打印reduce的内容
 //		reduce.print();
 		reduce.addSink(new ChannelsPvUvSinkReduce()).name("HotChannelReduce");
 
