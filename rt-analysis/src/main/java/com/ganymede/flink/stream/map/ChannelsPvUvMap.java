@@ -41,21 +41,21 @@ public class ChannelsPvUvMap implements FlatMapFunction<KafkaMessage, ChannelPvU
 		channelPvUv.setTimeString(hourTimeStamp);
 		channelPvUv.setGroupByField(hourTimeStamp + channelId);
 		out.collect(channelPvUv);
-//		System.out.println("小时==" + channelPvUv);
+		System.out.println("小时==" + channelPvUv);
 
 		//天
 		channelPvUv.setUvCount(isFirstDay == true ? 1l : 0l);
 		channelPvUv.setGroupByField(dayTimeStamp + channelId);
 		channelPvUv.setTimeString(dayTimeStamp);
 		out.collect(channelPvUv);
-//		System.out.println("天==" + channelPvUv);
+		System.out.println("天==" + channelPvUv);
 
 		//月
 		channelPvUv.setUvCount(isFirstMonth == true ? 1l : 0l);
 		channelPvUv.setGroupByField(monthTimeStamp + channelId);
 		channelPvUv.setTimeString(monthTimeStamp);
 		out.collect(channelPvUv);
-//		System.out.println("月==" + channelPvUv);
+		System.out.println("月==" + channelPvUv);
 
 	}
 }

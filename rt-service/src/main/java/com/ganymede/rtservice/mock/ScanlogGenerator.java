@@ -16,7 +16,7 @@ public class ScanlogGenerator {
     private static Long[] channels = new Long[]{1l, 2l, 3l, 4l, 5l, 6l, 7l, 8l}; //频道id集合
     private static Long[] categories = new Long[]{1l, 2l, 3l, 4l, 5l, 6l, 7l, 8l}; //产品类别id集合
     private static Long[] productids = new Long[]{1l, 2l, 3l, 4l, 5l, 6l, 7l, 8l}; //产品id集合
-    private static Long[] userIds = new Long[]{1l, 2l, 3l, 4l, 5l, 6l, 7l, 8l}; //用户id集合
+    private static Long[] userIds = new Long[]{1l, 2l, 3l, 4l, 5l, 6l, 7l, 8l,9l,10l,11l}; //用户id集合
 
     /**
      * 地区

@@ -5,16 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91104faa-98bf-4203-9635-3d02de663122" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/reduce/ChannelsPvUvSinkReduce.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/dao/ChannelVisterDao.java" afterPath="$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/dao/ChannelVisterDao.java" />
-      <change beforePath="$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/map/ChannelsKafkaMap.java" afterPath="$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/map/ChannelsKafkaMap.java" />
       <change beforePath="$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/map/ChannelsPvUvMap.java" afterPath="$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/map/ChannelsPvUvMap.java" />
-      <change beforePath="$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/reduce/ChannelPvUvReduce.java" afterPath="$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/reduce/ChannelPvUvReduce.java" />
-      <change beforePath="$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/task/HotChannelProcessData.java" afterPath="$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/task/HotChannelProcessData.java" />
       <change beforePath="$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/task/PvUvProcessData.java" afterPath="$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/task/PvUvProcessData.java" />
-      <change beforePath="$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/utils/HBaseUtil.java" afterPath="$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/utils/HBaseUtil.java" />
-      <change beforePath="$PROJECT_DIR$/rt-common/src/main/java/com/ganymede/analy/ChannelPvUv.java" afterPath="$PROJECT_DIR$/rt-common/src/main/java/com/ganymede/analy/ChannelPvUv.java" />
+      <change beforePath="$PROJECT_DIR$/rt-analysis/target/classes/com/ganymede/flink/stream/ProcessData$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/rt-analysis/target/classes/com/ganymede/flink/stream/ProcessData.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/rt-analysis/target/classes/com/ganymede/flink/stream/map/ChannelsKafkaMap.class" afterPath="$PROJECT_DIR$/rt-analysis/target/classes/com/ganymede/flink/stream/map/ChannelsKafkaMap.class" />
+      <change beforePath="$PROJECT_DIR$/rt-service/src/main/java/com/ganymede/rtservice/mock/ScanlogGenerator.java" afterPath="$PROJECT_DIR$/rt-service/src/main/java/com/ganymede/rtservice/mock/ScanlogGenerator.java" />
     </list>
     <ignored path="$PROJECT_DIR$/rt-view/target/" />
     <ignored path="$PROJECT_DIR$/rt-common/target/" />
@@ -33,58 +30,11 @@
       <file leaf-file-name="ChannelPvUvReduce.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/reduce/ChannelPvUvReduce.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="17" column="52" lean-forward="true" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+            <state relative-caret-position="289">
+              <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PvUvProcessData.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/task/PvUvProcessData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="58" column="78" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="58" selection-end-column="78" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HotChannelProcessData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/task/HotChannelProcessData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="54" column="33" lean-forward="false" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
-              <folding>
-                <element signature="e#2744#3058#0" expanded="true" />
-                <element signature="e#3057#3058#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChannelsPvUvSinkReduce.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/reduce/ChannelsPvUvSinkReduce.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="34" column="34" lean-forward="false" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HBaseUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/utils/HBaseUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="50" column="14" lean-forward="false" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -92,8 +42,8 @@
       <file leaf-file-name="ChannelsPvUvMap.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/map/ChannelsPvUvMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="59">
-              <caret line="29" column="65" lean-forward="false" selection-start-line="29" selection-start-column="65" selection-end-line="29" selection-end-column="65" />
+            <state relative-caret-position="-227">
+              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,32 +51,66 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ChannelHotMap.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/map/ChannelHotMap.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PvUvProcessData.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/task/PvUvProcessData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-238">
+              <caret line="25" column="36" lean-forward="false" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScanlogGenerator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rt-service/src/main/java/com/ganymede/rtservice/mock/ScanlogGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-540">
+              <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ChannelVisterDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/dao/ChannelVisterDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
-              <caret line="64" column="95" lean-forward="false" selection-start-line="64" selection-start-column="86" selection-end-line="64" selection-end-column="95" />
+            <state relative-caret-position="209">
+              <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SocketWindowWordCountJava.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/socket/SocketWindowWordCountJava.java">
+      <file leaf-file-name="HBaseUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/utils/HBaseUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+            <state relative-caret-position="-40">
+              <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ChannelsKafkaMap.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/map/ChannelsKafkaMap.java">
+      <file leaf-file-name="ChannelsPvUvSinkReduce.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/reduce/ChannelsPvUvSinkReduce.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-              <folding />
+            <state relative-caret-position="500">
+              <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -152,6 +136,7 @@
       <find>channelinfo</find>
       <find>groupByField</find>
       <find>countWindow</find>
+      <find>System.out.println</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -179,13 +164,14 @@
         <option value="$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/utils/DateUtil.java" />
         <option value="$PROJECT_DIR$/rt-common/src/main/java/com/ganymede/analy/UserState.java" />
         <option value="$PROJECT_DIR$/rt-common/src/main/java/com/ganymede/analy/ChannelPvUv.java" />
-        <option value="$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/dao/ChannelVisterDao.java" />
         <option value="$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/map/ChannelsKafkaMap.java" />
         <option value="$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/task/HotChannelProcessData.java" />
         <option value="$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/reduce/ChannelPvUvReduce.java" />
-        <option value="$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/map/ChannelsPvUvMap.java" />
         <option value="$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/utils/HBaseUtil.java" />
         <option value="$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/reduce/ChannelsPvUvSinkReduce.java" />
+        <option value="$PROJECT_DIR$/rt-service/src/main/java/com/ganymede/rtservice/mock/ScanlogGenerator.java" />
+        <option value="$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/map/ChannelsPvUvMap.java" />
+        <option value="$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/dao/ChannelVisterDao.java" />
         <option value="$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/task/PvUvProcessData.java" />
       </list>
     </option>
@@ -198,7 +184,12 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand />
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="Profiles" type="6783ec58:MavenProjectsStructure$ProfilesNode" />
+        </path>
+      </expand>
       <select />
     </treeState>
   </component>
@@ -226,6 +217,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
@@ -279,6 +272,26 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="flink" type="462c0819:PsiDirectoryNode" />
               <item name="batch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="real-time-analysis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="real-time-analysis" type="462c0819:PsiDirectoryNode" />
+              <item name="rt-analysis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="flink" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="real-time-analysis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="real-time-analysis" type="462c0819:PsiDirectoryNode" />
+              <item name="rt-analysis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="flink" type="462c0819:PsiDirectoryNode" />
+              <item name="kafka" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="real-time-analysis" type="b2602c69:ProjectViewProjectNode" />
@@ -348,12 +361,60 @@
               <item name="real-time-analysis" type="462c0819:PsiDirectoryNode" />
               <item name="rt-service" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="real-time-analysis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="real-time-analysis" type="462c0819:PsiDirectoryNode" />
+              <item name="rt-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="real-time-analysis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="real-time-analysis" type="462c0819:PsiDirectoryNode" />
+              <item name="rt-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="real-time-analysis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="real-time-analysis" type="462c0819:PsiDirectoryNode" />
+              <item name="rt-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="real-time-analysis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="real-time-analysis" type="462c0819:PsiDirectoryNode" />
+              <item name="rt-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="rtservice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="real-time-analysis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="real-time-analysis" type="462c0819:PsiDirectoryNode" />
+              <item name="rt-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="rtservice" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="real-time-analysis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="real-time-analysis" type="462c0819:PsiDirectoryNode" />
+              <item name="rt-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="rtservice" type="462c0819:PsiDirectoryNode" />
+              <item name="mock" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -620,7 +681,10 @@
       <workItem from="1550154641284" duration="4436000" />
       <workItem from="1550236153623" duration="6627000" />
       <workItem from="1550329510984" duration="2231000" />
-      <workItem from="1550374177898" duration="16594000" />
+      <workItem from="1550374177898" duration="16736000" />
+      <workItem from="1550744354302" duration="1251000" />
+      <workItem from="1550898418929" duration="1400000" />
+      <workItem from="1550978743451" duration="13759000" />
     </task>
     <task id="LOCAL-00001" summary="redis缓存展示">
       <created>1550065957241</created>
@@ -643,7 +707,14 @@
       <option name="project" value="LOCAL" />
       <updated>1550159034951</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="实时计算pv uv逻辑，调试">
+      <created>1550419912157</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1550419912157</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -652,7 +723,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56139000" />
+    <option name="totallyTimeSpent" value="72691000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -667,7 +738,7 @@
     <frame x="-4" y="-4" width="1608" height="878" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991013" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -676,18 +747,18 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.51296043" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37789905" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287858" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32742155" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3765348" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287858" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.473397" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23748395" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24582799" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -744,23 +815,16 @@
     <MESSAGE value="redis缓存展示" />
     <MESSAGE value="HBase操作工具类" />
     <MESSAGE value="实时计算pv uv逻辑" />
-    <option name="LAST_COMMIT_MESSAGE" value="实时计算pv uv逻辑" />
+    <MESSAGE value="实时计算pv uv逻辑，调试" />
+    <option name="LAST_COMMIT_MESSAGE" value="实时计算pv uv逻辑，调试" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="21" />
+      <option name="time" value="27" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/flink/flink-core/1.7.1/flink-core-1.7.1-sources.jar!/org/apache/flink/api/java/tuple/Tuple2.java" />
-    <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/batch/WorCountBatch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="55" column="27" lean-forward="true" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/map/ChannelsKafkaMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -772,7 +836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6960">
           <caret line="374" column="26" lean-forward="false" selection-start-line="374" selection-start-column="26" selection-end-line="374" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -810,13 +873,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/kafka/Kafka2KafkaExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-840">
-          <caret line="27" column="56" lean-forward="false" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -913,14 +969,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rt-analysis/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1080">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/utils/JedisPoolCacheUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1000">
@@ -932,7 +980,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-133">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -947,7 +994,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -975,7 +1021,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="34" column="9" lean-forward="false" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1000,43 +1045,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/map/ChannelHotMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rt-service/src/main/java/com/ganymede/rtservice/RtServiceApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rt-service/src/main/java/com/ganymede/rtservice/mock/ScanlogGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-40">
-          <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rt-common/src/main/java/com/ganymede/analy/ChannelPvUv.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-105">
           <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/reduce/ChannelReduce.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1048,83 +1060,147 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/utils/HBaseUtil.java">
+    <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/map/ChannelsKafkaMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="50" column="14" lean-forward="false" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
+        <state relative-caret-position="240">
+          <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/socket/SocketWindowWordCountJava.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/task/HotChannelProcessData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="54" column="33" lean-forward="false" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
-          <folding>
-            <element signature="e#2744#3058#0" expanded="true" />
-            <element signature="e#3057#3058#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/map/ChannelsKafkaMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        <state relative-caret-position="760">
+          <caret line="53" column="24" lean-forward="false" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/map/ChannelsPvUvMap.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/flink/flink-streaming-java_2.11/1.7.1/flink-streaming-java_2.11-1.7.1-sources.jar!/org/apache/flink/streaming/api/datastream/KeyedStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="29" column="65" lean-forward="false" selection-start-line="29" selection-start-column="65" selection-end-line="29" selection-end-column="65" />
+        <state relative-caret-position="11980">
+          <caret line="680" column="56" lean-forward="false" selection-start-line="680" selection-start-column="56" selection-end-line="680" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rt-service/src/main/java/com/ganymede/rtservice/RtServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="9" column="64" lean-forward="true" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
+          <folding>
+            <element signature="e#254#255#0" expanded="true" />
+            <element signature="e#316#317#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/reduce/ChannelReduce.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rt-analysis/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-360">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/kafka/KafkaEvent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/kafka/Kafka2KafkaExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="36" column="47" lean-forward="true" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/utils/HBaseUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-40">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/reduce/ChannelPvUvReduce.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="24" column="26" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/dao/ChannelVisterDao.java">
+    <entry file="file://$PROJECT_DIR$/rt-service/src/main/java/com/ganymede/rtservice/mock/ScanlogGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="64" column="95" lean-forward="false" selection-start-line="64" selection-start-column="86" selection-end-line="64" selection-end-column="95" />
+        <state relative-caret-position="-540">
+          <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/reduce/ChannelsPvUvSinkReduce.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="34" column="34" lean-forward="false" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="34" />
+        <state relative-caret-position="500">
+          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/reduce/ChannelPvUvReduce.java">
+    <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/map/ChannelHotMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="17" column="52" lean-forward="true" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/socket/SocketWindowWordCountJava.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+        <state relative-caret-position="340">
+          <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/dao/ChannelVisterDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/map/ChannelsPvUvMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-227">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rt-analysis/src/main/java/com/ganymede/flink/stream/task/PvUvProcessData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="58" column="78" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="58" selection-end-column="78" />
+        <state relative-caret-position="-238">
+          <caret line="25" column="36" lean-forward="false" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -23,7 +23,7 @@ public class PvUvProcessData {
 		args = new String[]{"--input-topic", "test", "--bootstrap.servers", "spark1:9092,spark2:9092,spark3:9092",
 				"--zookeeper.connect", "spark1:2181,spark2:2181,spark3:2181",
 				"--group.id", "ProcessData_20190217",
-				"--windows.size", "5", "--windows.slide", "1"};
+				"--windows.size", "1", "--windows.slide", "1"};
 
 		final ParameterTool parameterTool = ParameterTool.fromArgs(args);
 
@@ -52,10 +52,10 @@ public class PvUvProcessData {
 
 
 		DataStream<ChannelPvUv> reduce = map.keyBy("groupByField").
-//				countWindow(Long.valueOf(parameterTool.getRequired("windows.size"))).
+				countWindow(Long.valueOf(parameterTool.getRequired("windows.size"))).
 				reduce(new ChannelPvUvReduce());
 
-		reduce.print();
+//		reduce.print();
 		reduce.addSink(new ChannelsPvUvSinkReduce()).name("HotChannelReduce");
 
 		env.execute("ChannelsPvUv");
