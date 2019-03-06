@@ -17,8 +17,8 @@ public class ChannelsFreshSinkReduce implements SinkFunction<ChannelFresh> {
 		long oldCount = value.getOldCount();
 		String timeString = value.getTimeString();
 
-		String newCnt = HBaseUtil.getData("channelinfo", channelId + timeString + "", "info", "freshNewCnt");
-		String oldCnt = HBaseUtil.getData("channelinfo", channelId + timeString + "", "info", "freshOldCnt");
+		String newCnt = HBaseUtil.getData("channelinfo", channelId + "->" + timeString + "", "info", "freshNewCnt");
+		String oldCnt = HBaseUtil.getData("channelinfo", channelId + "->" + timeString + "", "info", "freshOldCnt");
 
 		if (StringUtils.isNotBlank(newCnt)) {
 			newCount += newCount + Long.valueOf(newCnt);

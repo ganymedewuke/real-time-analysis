@@ -79,9 +79,11 @@ public class HBaseUtil {
 
 		if (dataMap != null) {
 			Set<Map.Entry<String, String>> set = dataMap.entrySet();
+
 			for (Map.Entry<String, String> entry : set) {
 				String key = entry.getKey();
 				Object value = entry.getValue();
+				System.out.println(key + "->" + value);
 				put.addColumn(Bytes.toBytes(familyName), Bytes.toBytes(key), Bytes.toBytes(value + ""));
 			}
 		}

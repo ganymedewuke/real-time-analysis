@@ -23,7 +23,7 @@ public class ScanlogGenerator {
      */
     private static String[] countrys = new String[]{"America", "China"}; // 地区-国家集合
     private static String[] provinces = new String[]{"America", "China"}; // 地区-省集合
-    private static String[] citys = new String[]{"America", "China"}; // 地区-市集合
+    private static String[] citys = new String[]{"Shanghai", "hangzhou","beijing"}; // 地区-市集合
 
 
     /**
