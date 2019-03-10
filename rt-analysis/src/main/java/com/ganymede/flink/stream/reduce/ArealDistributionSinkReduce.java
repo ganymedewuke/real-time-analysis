@@ -21,6 +21,8 @@ public class ArealDistributionSinkReduce implements SinkFunction<ArealDistributi
 		long newCount = value.getNewCount();
 		long oldCount = value.getOldCount();
 
+		System.out.println(pvCount + " " + uvCount + " " + newCount + " " + oldCount);
+
 		String timeString = value.getTimeString();
 
 		String pv = HBaseUtil.getData("channelinfo", channelId + "->" + timeString + "", "info", "areaPv");
@@ -29,33 +31,40 @@ public class ArealDistributionSinkReduce implements SinkFunction<ArealDistributi
 		String newCnt = HBaseUtil.getData("channelinfo", channelId + "->" + timeString + "", "info", "arealNewCnt");
 		String oldCnt = HBaseUtil.getData("channelinfo", channelId + "->" + timeString + "", "info", "arealOldCnt");
 
-		Map<String, Long> map = new HashMap<>();
 		Map<String, String> datamap = new HashMap<>();
+		Map<String, Long> map = null;
 
-		dataJson2Map(pv, map, area, pvCount);
+		map = dataJson2Map(pv, area, pvCount);
 		datamap.put("areapv", JSON.toJSONString(map));
 
-		dataJson2Map(uv, map, area, uvCount);
+		map = dataJson2Map(uv, area, uvCount);
 		datamap.put("areauv", JSON.toJSONString(map));
 
-		dataJson2Map(newCnt, map, area, newCount);
+		map = dataJson2Map(newCnt, area, newCount);
 		datamap.put("arealNewCnt", JSON.toJSONString(map));
 
-		dataJson2Map(oldCnt, map, area, oldCount);
+		map = dataJson2Map(oldCnt, area, oldCount);
 		datamap.put("arealOldCnt", JSON.toJSONString(map));
 
-		System.out.println("ArealDistributionSinkReduce -> " + datamap);
 		HBaseUtil.put("channelinfo", channelId + "->" + timeString + "", "info", datamap);
 	}
 
-	private void dataJson2Map(String data, Map<String, Long> map, String area, Long value) {
-		if (StringUtils.isNotBlank(data)) {
+	private Map dataJson2Map(String data, String area, Long value) {
+		Map<String, Long> map = new HashMap<>();
+		if (StringUtils.isNotBlank(data) && !data.equals("null")) {
 			map = JSONObject.parseObject(data, Map.class);
-			Long count = Long.valueOf(map.get(area)+"");
-			if (count != null) {
-				value += value + count;
+			String cntStr = map.get(area) + "";
+			System.out.println(map);
+			if (!cntStr.equals("null")) {
+				Long count = Long.valueOf(map.get(area) + "");
+				if (count != null) {
+					value += value + count;
+				}
 			}
+			map.put(area, value);
+		} else {
+			map.put(area, value);
 		}
-		map.put(area, value);
+		return map;
 	}
 }

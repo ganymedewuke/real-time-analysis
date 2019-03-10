@@ -16,6 +16,9 @@ import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer010;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * 频道新鲜度
+ */
 public class ChannelFreshProcessData {
 	private final static Logger logger = LoggerFactory.getLogger(ChannelFreshProcessData.class);
 

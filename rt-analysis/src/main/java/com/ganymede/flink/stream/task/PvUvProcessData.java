@@ -16,6 +16,9 @@ import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer010;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * 计算频道pv uv
+ */
 public class PvUvProcessData {
 	private final static Logger logger = LoggerFactory.getLogger(PvUvProcessData.class);
 

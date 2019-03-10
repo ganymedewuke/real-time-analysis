@@ -20,13 +20,16 @@ import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer010;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * 频道浏览地区分布
+ */
 public class ArealDistributionProcessData {
 	private final static Logger logger = LoggerFactory.getLogger(ArealDistributionProcessData.class);
 
 	public static void main(String[] args) throws Exception {
 		args = new String[]{"--input-topic", "test", "--bootstrap.servers", "spark1:9092,spark2:9092,spark3:9092",
 				"--zookeeper.connect", "spark1:2181,spark2:2181,spark3:2181",
-				"--group.id", "ProcessData_20190303",
+				"--group.id", "ProcessData_20190311_1",
 				"--windows.size", "1", "--windows.slide", "1"};
 
 		final ParameterTool parameterTool = ParameterTool.fromArgs(args);

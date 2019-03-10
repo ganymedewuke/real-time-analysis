@@ -17,6 +17,9 @@ import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer010;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * 实时热点分析
+ */
 public class HotChannelProcessData {
 	private final static Logger logger = LoggerFactory.getLogger(HotChannelProcessData.class);
 
