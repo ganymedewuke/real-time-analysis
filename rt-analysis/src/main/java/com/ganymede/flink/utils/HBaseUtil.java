@@ -50,6 +50,10 @@ public class HBaseUtil {
 	 * disable 'channelinfo'
 	 * create 'channelinfo','info'
 	 *
+	 *
+	 * create 'userinfo','info'
+	 *
+	 *
 	 * @param tabName
 	 * @param familyName
 	 * @throws IOException

@@ -11,7 +11,7 @@ import org.apache.flink.api.common.functions.FlatMapFunction;
 import org.apache.flink.util.Collector;
 
 /**
- *  频道地区分布 map
+ * 频道地区分布 map
  */
 public class ArealDistributionMap implements FlatMapFunction<KafkaMessage, ArealDistribution> {
 	@Override
@@ -39,7 +39,6 @@ public class ArealDistributionMap implements FlatMapFunction<KafkaMessage, Areal
 		arealDistribution.setChannelId(channelId);
 		arealDistribution.setTimeStamp(timeStamp);
 		arealDistribution.setArea(city);
-		arealDistribution.setGroupByField(hourTimeStamp + channelId+city);
 		arealDistribution.setPv(1l);
 
 		/**
@@ -56,7 +55,7 @@ public class ArealDistributionMap implements FlatMapFunction<KafkaMessage, Areal
 		 * 小时
 		 */
 		long uvCount = 0l;
-		if(isFirstHour){
+		if (isFirstHour) {
 			uvCount = 1l;
 		}
 		arealDistribution.setUv(uvCount);
@@ -67,6 +66,7 @@ public class ArealDistributionMap implements FlatMapFunction<KafkaMessage, Areal
 		}
 		arealDistribution.setOldCount(oldUser);
 		arealDistribution.setTimeString(hourTimeStamp);
+		arealDistribution.setGroupByField(hourTimeStamp + channelId + city);
 		out.collect(arealDistribution);
 		System.out.println("频道地区分布小时 " + arealDistribution);
 
@@ -75,7 +75,7 @@ public class ArealDistributionMap implements FlatMapFunction<KafkaMessage, Areal
 		 */
 		uvCount = 0l;
 		oldUser = 0l;
-		if(isFirstDay){
+		if (isFirstDay) {
 			uvCount = 1l;
 		}
 		arealDistribution.setUv(uvCount);
@@ -85,6 +85,7 @@ public class ArealDistributionMap implements FlatMapFunction<KafkaMessage, Areal
 		}
 		arealDistribution.setOldCount(oldUser);
 		arealDistribution.setTimeString(dayTimeStamp);
+		arealDistribution.setGroupByField(dayTimeStamp + channelId + city);
 		out.collect(arealDistribution);
 		System.out.println("频道地区分布天 " + arealDistribution);
 
@@ -92,7 +93,7 @@ public class ArealDistributionMap implements FlatMapFunction<KafkaMessage, Areal
 		 *  月
 		 */
 		uvCount = 0l;
-		if(isFirstMonth){
+		if (isFirstMonth) {
 			uvCount = 1l;
 		}
 		arealDistribution.setUv(uvCount);
@@ -102,6 +103,7 @@ public class ArealDistributionMap implements FlatMapFunction<KafkaMessage, Areal
 			oldUser = 1l;
 		}
 		arealDistribution.setOldCount(oldUser);
+		arealDistribution.setGroupByField(monthTimeStamp + channelId + city);
 		arealDistribution.setTimeString(monthTimeStamp);
 		out.collect(arealDistribution);
 		System.out.println("频道地区分布月 " + arealDistribution);

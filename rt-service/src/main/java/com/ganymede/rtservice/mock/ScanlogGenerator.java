@@ -29,7 +29,7 @@ public class ScanlogGenerator {
 	/**
 	 * 网络方式
 	 */
-	private static String[] networks = new String[]{"电信", "移动", "联通"};
+	private static String[] networks = new String[]{"dianxin", "yidong", "liantong"};
 
 	/**
 	 * 来源方式
