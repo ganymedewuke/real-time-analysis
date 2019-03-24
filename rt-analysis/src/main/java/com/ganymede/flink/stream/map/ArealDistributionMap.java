@@ -11,7 +11,7 @@ import org.apache.flink.api.common.functions.FlatMapFunction;
 import org.apache.flink.util.Collector;
 
 /**
- *  频道地区分布 map
+ *
  */
 public class ArealDistributionMap implements FlatMapFunction<KafkaMessage, ArealDistribution> {
 	@Override

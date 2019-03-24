@@ -1,6 +1,8 @@
 package com.ganymede.log;
 
-public class UserScanLog {
+import com.ganymede.data.TableData;
+
+public class UserScanLog implements TableData {
 
     private Long channelId; //频道
     private Long categoryId; //产品类别id
@@ -111,5 +113,23 @@ public class UserScanLog {
 
     public void setEndTime(Long endTime) {
         this.endTime = endTime;
+    }
+
+    @Override
+    public String toString() {
+        return "UserScanLog{" +
+                "channelId=" + channelId +
+                ", categoryId=" + categoryId +
+                ", productId=" + productId +
+                ", userId=" + userId +
+                ", country='" + country + '\'' +
+                ", province='" + province + '\'' +
+                ", city='" + city + '\'' +
+                ", netword='" + netword + '\'' +
+                ", source='" + source + '\'' +
+                ", browser='" + browser + '\'' +
+                ", startTime=" + startTime +
+                ", endTime=" + endTime +
+                '}';
     }
 }

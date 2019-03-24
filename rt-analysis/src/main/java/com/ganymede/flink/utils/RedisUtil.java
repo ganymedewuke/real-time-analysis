@@ -3,7 +3,7 @@ package com.ganymede.flink.utils;
 import redis.clients.jedis.Jedis;
 
 public class RedisUtil {
-    public static final Jedis jedis = new Jedis("spark1", 6379);
+    public static final Jedis jedis = new Jedis("hadoop1", 6379);
 
     public static String getByKey(String key) {
         return jedis.get(key);

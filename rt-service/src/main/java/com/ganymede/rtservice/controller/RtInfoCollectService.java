@@ -32,7 +32,7 @@ public class RtInfoCollectService {
     public void webInfoColService(@RequestBody String jsonstr, HttpServletRequest request, HttpServletResponse response) {
         logger.info("webInfoColService 业务开始！ ");
 
-        logger.info("未转换之前的： "+jsonstr);
+        logger.info("未转换之前的： " + jsonstr);
 
         KafkaMessage kafkaMessage = new KafkaMessage();
         kafkaMessage.setJsonMessage(jsonstr);
@@ -40,9 +40,10 @@ public class RtInfoCollectService {
         kafkaMessage.setTimeStamp(new Date().getTime());
         jsonstr = JSON.toJSONString(kafkaMessage);
 
-        logger.info("未转换之后的： "+jsonstr);
+        logger.info("未转换之后的： " + jsonstr);
 
-        kafkaTemplate.send("test", "key", jsonstr);
+        kafkaTemplate.send("realtime", "key", jsonstr);
+
 
         response.setStatus(HttpStatus.OK.value());
         PrintWriter printWriter = getWriter(response);
