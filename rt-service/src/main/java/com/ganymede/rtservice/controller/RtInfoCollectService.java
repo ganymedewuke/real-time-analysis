@@ -2,7 +2,6 @@ package com.ganymede.rtservice.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.ganymede.input.KafkaMessage;
-import com.ganymede.log.UserScanLog;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,7 +41,7 @@ public class RtInfoCollectService {
 
         logger.info("未转换之后的： " + jsonstr);
 
-        kafkaTemplate.send("realtime", "key", jsonstr);
+        kafkaTemplate.send("test", "key", jsonstr);
 
 
         response.setStatus(HttpStatus.OK.value());

@@ -1,9 +1,9 @@
 package com.ganymede.flink.stream.task;
 
-import com.ganymede.analy.Usernetwork;
-import com.ganymede.flink.stream.map.UsernetworkMap;
-import com.ganymede.flink.stream.reduce.UserNetWorkSinkReduce;
-import com.ganymede.flink.stream.reduce.UserNetworkReduce;
+import com.ganymede.analy.UserBrowser;
+import com.ganymede.flink.stream.map.UserBrowserMap;
+import com.ganymede.flink.stream.reduce.UserBrowserReduce;
+import com.ganymede.flink.stream.reduce.UserBrowserSinkReduce;
 import com.ganymede.flink.transfer.KafkaMessageSchema;
 import com.ganymede.flink.transfer.KafkaMessageWatermarks;
 import com.ganymede.input.KafkaMessage;
@@ -19,13 +19,13 @@ import org.slf4j.LoggerFactory;
 /**
  * 用户网络分析处理逻辑
  */
-public class UserNetworkAnalyProcessData {
-	private final static Logger logger = LoggerFactory.getLogger(UserNetworkAnalyProcessData.class);
+public class UserBrowserAnalyProcessData {
+	private final static Logger logger = LoggerFactory.getLogger(UserBrowserAnalyProcessData.class);
 
 	public static void main(String[] args) throws Exception {
 		args = new String[]{"--input-topic", "test", "--bootstrap.servers", "spark1:9092,spark2:9092,spark3:9092",
 				"--zookeeper.connect", "spark1:2181,spark2:2181,spark3:2181",
-				"--group.id", "ProcessData_20190331_1",
+				"--group.id", "ProcessData_20190405",
 				"--windows.size", "1", "--windows.slide", "1"};
 
 		final ParameterTool parameterTool = ParameterTool.fromArgs(args);
@@ -51,17 +51,17 @@ public class UserNetworkAnalyProcessData {
 		// 获取数据流，注意：实时为 DataStream, 批处理为 DataSet
 		DataStream<KafkaMessage> input = env.addSource(flinkKafkaConsumer010.assignTimestampsAndWatermarks(new KafkaMessageWatermarks()));
 
-		DataStream<Usernetwork> map = input.flatMap(new UsernetworkMap());
+		DataStream<UserBrowser> map = input.flatMap(new UserBrowserMap());
 
 
-		DataStream<Usernetwork> reduce = map.keyBy("timeString").
+		DataStream<UserBrowser> reduce = map.keyBy("timeString").
 				countWindow(Long.valueOf(parameterTool.getRequired("windows.size"))).
-				reduce(new UserNetworkReduce());
+				reduce(new UserBrowserReduce());
 
 		//打印reduce的内容
 //		reduce.print();
-		reduce.addSink(new UserNetWorkSinkReduce()).name("UserNetWorkSinkReduce");
+		reduce.addSink(new UserBrowserSinkReduce()).name("UserBrowserSinkReduce");
 
-		env.execute("UserNetworkAnalyProcessData");
+		env.execute("UserBrowserAnalyProcessData");
 	}
 }

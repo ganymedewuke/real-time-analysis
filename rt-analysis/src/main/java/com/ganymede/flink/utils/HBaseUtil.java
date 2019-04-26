@@ -9,8 +9,6 @@ import org.apache.hadoop.hbase.client.*;
 import org.apache.hadoop.hbase.util.Bytes;
 
 import java.io.IOException;
-import java.util.Date;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
@@ -138,18 +136,18 @@ public class HBaseUtil {
 	}
 
 	public static void main(String[] args) throws IOException {
-		Map<String, String> map = new HashMap();
-		map.put("m1", "xx");
-		map.put("m2", "xx2");
-		map.put("m3", "你好，谢谢");
+//		Map<String, String> map = new HashMap();
+//		map.put("m1", "xx");
+//		map.put("m2", "xx2");
+//		map.put("m3", "你好，谢谢");
+//
+//		put("baseuserscaninfo", "a4", "time", map);
+//
+//
+//		putData("baseuserscaninfo", "a3", "time", "sys", "你好，谢谢");
 
-		put("baseuserscaninfo", "a4", "time", map);
 
-
-		putData("baseuserscaninfo", "a3", "time", "sys", "你好，谢谢");
-
-
-		String result = getData("baseuserscaninfo", "a3", "time", "sys");
+		String result = getData("userinfo", "201904->QQ浏览器", "info", "areapv");
 		System.out.println(result);
 	}
 

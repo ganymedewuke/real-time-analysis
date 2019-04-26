@@ -6,7 +6,7 @@ spring:
 
 kafka:
     consumer:
-      servers: bigdata1:9092,bigdata2:9092,bigdata3:9092
+      servers: spark1:9092,spark2:9092,spark3:9092
       enable-auto-commit: true
       auto-offset-reset: latest
       auto.commit.interval: 100
@@ -15,7 +15,7 @@ kafka:
       topic: test
       concurrency: 10
     producer:
-      bootstrap-servers: bigdata1:9092,bigdata2:9092,bigdata3:9092
+      bootstrap-servers: spark1:9092,spark2:9092,spark3:9092
       retries: 0
       batch-size: 4096
       buffer-memory: 40960
